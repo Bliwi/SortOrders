@@ -1,0 +1,8 @@
+admin.tpl
+maintain.inc.php
+include/install.inc.php
+template/themes/
+template/themes/simple.tpl
+template/themes/index.php
+template/themes/stripped.tpl
+template/themes/default.tpl

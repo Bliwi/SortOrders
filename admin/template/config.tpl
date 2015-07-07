@@ -15,35 +15,22 @@ jQuery(".showInfo").tipTip({
 {/footer_script}
 
 
-<div class="titrePage">
+<div class="titlePage">
 	<h2>SortOrders</h2>
 </div>
 
 <form method="post" action="" class="properties">
 <fieldset>
-  <legend>{'Common configuration'|translate}</legend>
+  <legend>{'Active sort orders'|translate}</legend>
+  <label>{', '|implode:$disabled}</label>
+  {foreach from=$sort_ids item=ids name=item}
+    <label>    
+      <input type="checkbox" name={$ids} {if ! in_array($ids, $disabled)}checked="checked"{/if}>
+      <b>{$sort_names[$smarty.foreach.item.index]}</b>
+    </label>
+    <br/>
+  {/foreach}  
 
-  <ul>
-    <li>
-      <label>
-        <input type="checkbox" name="option2" value="1" {if $sortorders.option2}checked="checked"{/if}>
-        <b>{'Checkbox'|translate}</b>
-      </label>
-      <a class="icon-info-circled-1 showInfo" title="{'Check me!'|translate}"></a>
-    </li>
-    <li class="option1" {if not $sortorders.option2}style="display:none;"{/if}>
-      <label>
-        <b>{'Integer'|translate}</b>
-        <input type="text" name="option1" value="{$sortorders.option1}" size="4">
-      </label>
-    </li>
-    <li>
-      <label>
-        <b>{'Select'|translate}</b>
-        {html_options name=option3 options=$select_options selected=$sortorders.option3}
-      </label>
-    </li>
-  </ul>
 </fieldset>
 
 <p class="formButtons"><input type="submit" name="save_config" value="{'Save Settings'|translate}"></p>

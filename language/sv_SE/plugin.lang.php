@@ -7,6 +7,6 @@
  */
 
 $lang['SortOrders'] = 'SortOrders';
-$lang['Random'] = 'Random';
-$lang['Active sort orders'] = 'Active sort orders';
+$lang['Random'] = 'Slumpmässig';
+$lang['Active sort orders'] = 'Aktiva sorteringsordning';
 ?>

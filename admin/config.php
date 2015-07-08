@@ -6,8 +6,13 @@ defined('SORTORDERS_PATH') or die('Hacking attempt!');
 // +-----------------------------------------------------------------------+
 
 $sort_orders = get_category_preferred_image_orders();
-$page['infos'][] = l10n(implode(array_column($sort_orders, 0)));
-array_shift($sort_orders); // remove standard sort order
+
+// remove standard sort order
+array_shift($sort_orders); 
+
+// Add new sort orders
+array_push($sort_orders, array(l10n('Random'), 'RAND()', true)); 
+
 $sort_ids = str_replace(' ', '_', array_column($sort_orders, 1));
 $sort_names = array_column($sort_orders, 0);
 

@@ -45,19 +45,16 @@ if (defined('IN_ADMIN'))
   $admin_file = SORTORDERS_PATH . 'include/admin_events.inc.php';
 
   // admin plugins menu link
-  add_event_handler('get_admin_plugin_menu_links', 'sortorders_admin_plugin_menu_links',
-    EVENT_HANDLER_PRIORITY_NEUTRAL, $admin_file);
+  add_event_handler('get_admin_plugin_menu_links', 'sortorders_admin_plugin_menu_links', EVENT_HANDLER_PRIORITY_NEUTRAL, $admin_file);
 }
-else
-{
+else{
+
   // file containing all public handlers functions
   $public_file = SORTORDERS_PATH . 'include/public_events.inc.php';
 
   // add category prefered image orders
-  add_event_handler('get_category_preferred_image_orders', 'get_choosen_sort_orders',
-	  EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
+  add_event_handler('get_category_preferred_image_orders', 'get_choosen_sort_orders', EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
 }
-
 // file containing API function
 $ws_file = SORTORDERS_PATH . 'include/ws_functions.inc.php';
 

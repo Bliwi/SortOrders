@@ -22,10 +22,9 @@ jQuery(".showInfo").tipTip({
 <form method="post" action="" class="properties">
 <fieldset>
   <legend>{'Active sort orders'|translate}</legend>
-  <label>{', '|implode:$disabled}</label>
   {foreach from=$sort_ids item=ids name=item}
     <label>    
-      <input type="checkbox" name={$ids} {if ! in_array($ids, $disabled)}checked="checked"{/if}>
+      <input type="checkbox" name="{$ids}" {if !$sortorders.disabled || ! in_array($ids, $sortorders.disabled)}checked="checked"{/if}>
       <b>{$sort_names[$smarty.foreach.item.index]}</b>
     </label>
     <br/>

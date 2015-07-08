@@ -1,1 +1,1 @@
-This is not a plugin. It's a sortorders for future plugins.
+Denna plugin möjliggör för en administrator att välja vilka sorterings ordningar som skall vara valbara av användare. Den adderar även en slumpmässing sorteringsordning.

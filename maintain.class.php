@@ -9,9 +9,7 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 class sortorders_maintain extends PluginMaintain
 {
   private $default_conf = array(
-    'option1' => 10,
-    'option2' => true,
-    'option3' => 'two',
+    'disabled' => array()
     );
 
   private $table;
@@ -48,12 +46,6 @@ class sortorders_maintain extends PluginMaintain
     else
     {
       $old_conf = safe_unserialize($conf['sortorders']);
-
-      if (empty($old_conf['option3']))
-      { // use case: this parameter was added in a new version
-        $old_conf['option3'] = 'two';
-      }
-
       conf_update_param('sortorders', $old_conf, true);
     }
 

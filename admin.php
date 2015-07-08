@@ -10,7 +10,7 @@ global $template, $page, $conf;
 
 
 // get current tab
-$page['tab'] = isset($_GET['tab']) ? $_GET['tab'] : $page['tab'] = 'home';
+$page['tab'] = isset($_GET['tab']) ? $_GET['tab'] : $page['tab'] = 'config';
 
 // plugin tabsheet is not present on photo page
 if ($page['tab'] != 'photo')
@@ -20,7 +20,6 @@ if ($page['tab'] != 'photo')
   $tabsheet = new tabsheet();
   $tabsheet->set_id('sortorders');
 
-  $tabsheet->add('home', l10n('Welcome'), SORTORDERS_ADMIN . '-home');
   $tabsheet->add('config', l10n('Configuration'), SORTORDERS_ADMIN . '-config');
   $tabsheet->select($page['tab']);
   $tabsheet->assign();

@@ -15,22 +15,6 @@ function sortorders_admin_plugin_menu_links($menu)
 }
 
 /**
- * add a tab on photo properties page
- */
-function sortorders_tabsheet_before_select($sheets, $id)
-{
-  if ($id == 'photo')
-  {
-    $sheets['sortorders'] = array(
-      'caption' => l10n('SortOrders'),
-      'url' => SORTORDERS_ADMIN.'-photo&amp;image_id='.$_GET['image_id'],
-      );
-  }
-
-  return $sheets;
-}
-
-/**
  * add a prefilter to the Batch Downloader
  */
 function sortorders_add_batch_manager_prefilters($prefilters)
@@ -41,25 +25,6 @@ function sortorders_add_batch_manager_prefilters($prefilters)
     );
 
   return $prefilters;
-}
-
-/**
- * perform added prefilter
- */
-function sortorders_perform_batch_manager_prefilters($filter_sets, $prefilter)
-{
-  if ($prefilter == 'sortorders')
-  {
-    $query = '
-SELECT id
-  FROM '.IMAGES_TABLE.'
-  ORDER BY RAND()
-  LIMIT 20
-;';
-    $filter_sets[] = query2array($query, null, 'id');
-  }
-
-  return $filter_sets;
 }
 
 /**
@@ -81,24 +46,4 @@ function sortorders_loc_end_element_set_global()
     'NAME' => l10n('SortOrders'),
     'CONTENT' => '<label><input type="checkbox" name="check_sortorders"> '.l10n('Check me!').'</label>',
     ));
-}
-
-/**
- * perform added action
- */
-function sortorders_element_set_global_action($action, $collection)
-{
-  global $page;
-
-  if ($action == 'sortorders')
-  {
-    if (empty($_POST['check_sortorders']))
-    {
-      $page['warnings'][] = l10n('Nothing appened, but you didn\'t check the box!');
-    }
-    else
-    {
-      $page['infos'][] = l10n('Nothing appened, but you checked the box!');
-    }
-  }
 }

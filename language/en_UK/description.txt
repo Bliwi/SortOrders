@@ -1,1 +1,1 @@
-This is not a plugin. It's a sortorders for future plugins.
+This plugin makes it possible for the administrator to select which sort orders that should be visible to users. It also adds a random sort order. 

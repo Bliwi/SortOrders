@@ -7,11 +7,9 @@ class sortorders_maintain extends PluginMaintain
     'disabled' => array()
     );
 
-  private $table;
-
   function __construct($plugin_id)
   {
-    parent::__construct($plugin_id); // always call parent constructor
+    parent::__construct($plugin_id);
   }
 
   function install($plugin_version, &$errors=array())

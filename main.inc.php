@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: sortorders
-Version: 1.0.0
+Plugin Name: SortOrders
+Version: 1.1.0
 Description: Select which sort orders that should be avalible, also adds a random sort order.
-Plugin URI:
+Plugin URI: http://piwigo.org/ext/extension_view.php?eid=806
 Author: Per Sandström
-Author URI:
+Author URI: https://github.com/persandstrom
 */
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
@@ -34,13 +34,6 @@ else{
   // add category prefered image orders
   add_event_handler('get_category_preferred_image_orders', 'get_choosen_sort_orders', EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
 }
-// file containing API function
-$ws_file = SORTORDERS_PATH . 'include/ws_functions.inc.php';
-
-// add API function
-add_event_handler('ws_add_methods', 'sortorders_ws_add_methods',
-    EVENT_HANDLER_PRIORITY_NEUTRAL, $ws_file);
-
 
 function sortorders_init()
 {

@@ -1,1 +1,1 @@
-Denna plugin möjliggör för en administrator att välja vilka sorterings ordningar som skall vara valbara av användare. Den adderar även en slumpmässing sorteringsordning.
+Denna tilläggsmodul möjliggör för en administrator att välja vilka sorteringsordningar som skall vara valbara av användare. Den adderar även en slumpmässing sorteringsordning.

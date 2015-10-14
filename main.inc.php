@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: SortOrders
-Version: 1.1.0
+Version: 1.2.0
 Description: Select which sort orders that should be avalible, also adds a random sort order.
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=806
 Author: Per Sandström

@@ -6,6 +6,7 @@ Description: Select which sort orders that should be avalible, also adds a rando
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=806
 Author: Per Sandström
 Author URI: https://github.com/persandstrom
+Has Settings: true
 */
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');

@@ -1,0 +1,1 @@
+Yöneticilere, kullanıcılara görünür olması gereken sıralama düzenlerini seçmesini mümkün kılar. Ayrıca rastgele bir sıralama düzeni ekler.

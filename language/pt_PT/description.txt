@@ -1,0 +1,1 @@
+Possibilita que o administrador selecione quais as ordens de classificação que devem ser visíveis para aos utilizadores. Isto também adiciona uma ordem de classificação aleatória.

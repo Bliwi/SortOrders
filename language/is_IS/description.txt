@@ -1,0 +1,1 @@
+Gerir stjórnanda kleift að velja hvaða flokkunarraðanir eigi að vera sýnilegar notendum. Það bætir einnig við handahófskenndri röð.

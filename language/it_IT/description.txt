@@ -1,0 +1,1 @@
+Consente all'amministratore di selezionare quale tipo di ordinamento deve essere visibile agli utenti. Aggiunge anche un ordinamento casuale.

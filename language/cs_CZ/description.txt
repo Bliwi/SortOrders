@@ -1,0 +1,1 @@
+Umožňuje správci vybrat pořadí třídění, které má být viditelné pro uživatele. Přidává také náhodné řazení. 

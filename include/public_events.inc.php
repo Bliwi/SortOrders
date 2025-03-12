@@ -4,10 +4,15 @@ defined('SORTORDERS_PATH') or die('Hacking attempt!');
 function get_choosen_sort_orders($orders)
 {
   global $conf, $page;
+<<<<<<< HEAD
   if (!isset($_SESSION['random_seed'])) {
     $_SESSION['random_seed'] = mt_rand();
   }
   array_push($orders, array(l10n('Random'), 'RAND(' . $_SESSION['random_seed'] . ')', true)); 
+=======
+
+  array_push($orders, array(l10n('Random'), 'RAND()', true)); 
+>>>>>>> 106a5689079a91f7a413e8a9ad4694b7aa72ad45
   
   $to_remove = array();
   foreach($conf['sortorders']['disabled'] as $disabled)
@@ -17,6 +22,7 @@ function get_choosen_sort_orders($orders)
 
   return array_filter($orders, function($v) use($to_remove) {return !in_array($v[1], $to_remove);}); 
 }
+<<<<<<< HEAD
 
 function sortorders_add_button()
 {
@@ -28,3 +34,5 @@ function sortorders_add_button()
   
   $template->add_index_button($button, BUTTONS_RANK_NEUTRAL);
 }
+=======
+>>>>>>> 106a5689079a91f7a413e8a9ad4694b7aa72ad45

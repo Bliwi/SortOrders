@@ -1,7 +1,11 @@
 <?php
 /*
 Plugin Name: SortOrders
+<<<<<<< HEAD
 Version: 1.3.1
+=======
+Version: 1.2.0
+>>>>>>> 106a5689079a91f7a413e8a9ad4694b7aa72ad45
 Description: Select which sort orders that should be avalible, also adds a random sort order.
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=806
 Author: Per Sandström
@@ -34,9 +38,12 @@ else{
 
   // add category prefered image orders
   add_event_handler('get_category_preferred_image_orders', 'get_choosen_sort_orders', EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
+<<<<<<< HEAD
   
   // add randomize button to index pages
   add_event_handler('loc_end_index', 'sortorders_add_button', EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
+=======
+>>>>>>> 106a5689079a91f7a413e8a9ad4694b7aa72ad45
 }
 
 function sortorders_init()
@@ -44,7 +51,10 @@ function sortorders_init()
   global $conf;
   load_language('plugin.lang', SORTORDERS_PATH);
   $conf['sortorders'] = safe_unserialize($conf['sortorders']);
+<<<<<<< HEAD
 
   require_once(SORTORDERS_PATH . 'include/ws_functions.inc.php');
   add_event_handler('ws_add_methods', 'sortorders_ws_add_methods');
+=======
+>>>>>>> 106a5689079a91f7a413e8a9ad4694b7aa72ad45
 }
